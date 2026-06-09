@@ -8,8 +8,17 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+app.get("/api/about", (req, res) => {
+  res.json({
+    appName: "StatusPulse",
+    purpose: "Monitor websites and APIs",
+    version: "1.0.0",
+  });
+});
+
 const PORT = 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
